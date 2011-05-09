@@ -9,7 +9,7 @@ module CI #:nodoc:
     class ReportManager
       def initialize(prefix)
         @basedir = ENV['CI_REPORTS'] || File.expand_path("#{Dir.getwd}/#{prefix.downcase}/reports")
-        @basename = "#{@basedir}/#{prefix.upcase}"
+        @basename = "#{prefix.upcase}"
         FileUtils.mkdir_p(@basedir)
       end
       
@@ -50,7 +50,15 @@ module CI #:nodoc:
           i += 1
         end
         
-        filename
+        puts "filename: #{filename}"
+        
+        if filename.size > 251
+          filename = "#{filename[0..209]}-#{Digest::SHA1.hexdigest(filename[209..-1])}.#{suffix}"
+        end
+        
+        puts "filename: #{filename}"
+        
+        "#{@basedir}/#{filename}"
       end
     end
   end

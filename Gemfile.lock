@@ -9,10 +9,13 @@ GEM
       json (>= 1.4.6)
       term-ansicolor (>= 1.0.5)
     diff-lcs (1.1.2)
+    gherkin (2.3.5)
+      json (>= 1.4.6)
     gherkin (2.3.5-java)
       json (>= 1.4.6)
     hoe (2.9.4)
       rake (>= 0.8.7)
+    json (1.5.1)
     json (1.5.1-java)
     rake (0.8.7)
     rspec (2.5.0)
@@ -28,6 +31,7 @@ GEM
 
 PLATFORMS
   java
+  ruby
 
 DEPENDENCIES
   builder
