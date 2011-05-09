@@ -50,13 +50,9 @@ module CI #:nodoc:
           i += 1
         end
         
-        puts "filename: #{filename}"
-        
         if filename.size > 251
           filename = "#{filename[0..209]}-#{Digest::SHA1.hexdigest(filename[209..-1])}.#{suffix}"
         end
-        
-        puts "filename: #{filename}"
         
         "#{@basedir}/#{filename}"
       end
