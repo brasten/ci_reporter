@@ -1,3 +1,7 @@
+== [brasten-ci_reporter] 1.6.5 (05/12/2011)
+
+- Added patch for long file names
+
 == 1.6.4 (12/21/10)
 
 - RSpec 2.2+ support (thanks emi)
